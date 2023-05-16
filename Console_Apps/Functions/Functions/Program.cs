@@ -17,9 +17,17 @@ namespace Functions
         // Main function, execution entry point of the program 
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter num1 : ");
+            string num1_str = Console.ReadLine();
+            int num1 = Convert.ToInt32(num1_str);
+
+            Console.WriteLine("Enter num2 : ");
+            string num2_str = Console.ReadLine();
+            int num2 = Convert.ToInt32(num2_str);
+
             Program program = new Program();
-            int sum = program.add_num(3, 4);
-            Console.WriteLine("Addition of 2 numbers is : " + sum);
+            int sum = program.add_num(num1, num2);
+            Console.WriteLine("Addition of the numbers " + num1 + " and " + num2 + " is : " + sum);            
             
             Console.ReadKey();
         }
